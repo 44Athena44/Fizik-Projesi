@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Sınıf Fizik Kursu</title>
+    <style>
+      body {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            line-height: 1.6;
+            color: #222;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        header {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-weight: normal;
+            font-size: 2.2em;
+            margin-bottom: 0.25em;
+            color: #000;
+        }
+        h2 {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-weight: normal;
+            font-size: 1.8em;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 3px;
+            margin-top: 1.5em;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 1.2em;
+            color: #222;
+            font-weight: normal;
+        }
+        h4 {
+            font-size: 1.3em;
+            margin-top: 1em;
+            font-weight: normal;
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 5px 20px;
+            margin: 1em 0;
+            display: inline-block;
+        }
+        .toc h2 {
+            border: none;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .toc ul {
+            padding-left: 20px;
+        }
+        .toc li {
+            margin: 5px 0;
+        }
+        .formula {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid #3366cc;
+            font-family: "Latin Modern Math", "STIX Two Math", "Cambria Math", serif;
+        }
+        .unit-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .unit-box {
+            width: 48%;
+            margin-bottom: 20px;
+            background: white;
+            border: 1px solid #a2a9b1;
+            border-radius: 3px;
+            padding: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .unit-box h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #eaecf0;
+            padding-bottom: 10px;
+        }
+        .unit-box ul {
+            padding-left: 20px;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border: 1px solid #a2a9b1;
+            border-radius: 0 0 3px 3px;
+            margin-bottom: 20px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: -1px;
+        }
+        .tab-button {
+            background: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            border-bottom: none;
+            padding: 8px 15px;
+            margin-right: 5px;
+            border-radius: 3px 3px 0 0;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .tab-button:hover {
+            background: #eaecf0;
+        }
+        .tab-button.active {
+            background: white;
+            border-bottom: 1px solid white;
+        }
+        a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .figure {
+            margin: 15px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+        }
+        .figure-caption {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+        .box {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        .example {
+            background-color: #f3f8ff;
+            border-left: 3px solid #3366cc;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>10. Sınıf Fizik Kursu</h1>
+        <p>Türkiye Milli Eğitim Bakanlığı 10. Sınıf Fizik Müfredatı</p>
+    </header>
+
+    <div class="toc">
+        <h2>İçindekiler</h2>
+        <ul>
+            <li><a href="#overview">Sitenin Özellikleri</a></li>
+            <li><a href="#navigation">Ünite Haritası</a></li>
+            <li><a href="#units">Üniteler</a>
+                <ul>
+                    <li><a href="#unit1">1. Ünite: Elektrik ve Manyetizma</a></li>
+                    <li><a href="#unit2">2. Ünite: Basınç ve Kaldırma Kuvveti</a></li>
+                    <li><a href="#unit3">3. Ünite: Dalgalar</a></li>
+                    <li><a href="#unit4">4. Ünite: Optik</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <section id="overview">
+        <h2>Sitenin Özellikleri</h2>
+        <p>Bu site, Türkiye Milli Eğitim Bakanlığı 10. Sınıf Fizik müfredatını kapsamlı bir şekilde sunmaktadır. Site dört ana ünite içermekte olup, her ünite kendi içinde detaylı alt başlıklara ayrılmıştır.</p>
+        <p>Ünite haritası bölümünden istediğiniz üniteyi seçerek konuları detaylı olarak inceleyebilirsiniz. Her ünitede teorik bilgiler, formüller, örnekler ve önemli notlar bulunmaktadır.</p>
+    </section>
+
+    <section id="navigation">
+        <h2>Ünite Haritası</h2>
+        <div class="unit-container">
+            <div class="unit-box">
+                <h3>1. Ünite: Elektrik ve Manyetizma</h3>
+                <ul>
+                    <li>Elektrik Akımı ve Özellikleri</li>
+                    <li>Potansiyel Farkı (Gerilim)</li>
+                    <li>Direnç ve Ohm Kanunu</li>
+                    <li>Elektrik Devreleri</li>
+                </ul>
+                <a href="#unit1">Üniteye Git →</a>
+            </div>
+            <div class="unit-box">
+                <h3>2. Ünite: Basınç ve Kaldırma Kuvveti</h3>
+                <ul>
+                    <li>Basınç Kavramı</li>
+                    <li>Katı, Sıvı ve Gaz Basıncı</li>
+                    <li>Kaldırma Kuvveti</li>
+                    <li>Archimedes İlkesi</li>
+                </ul>
+                <a href="#unit2">Üniteye Git →</a>
+            </div>
+            <div class="unit-box">
+                <h3>3. Ünite: Dalgalar</h3>
+                <ul>
+                    <li>Dalga Kavramı ve Özellikleri</li>
+                    <li>Yay Dalgası</li>
+                    <li>Su Dalgası</li>
+                    <li>Ses Dalgası ve Özellikleri</li>
+                </ul>
+                <a href="#unit3">Üniteye Git →</a>
+            </div>
+            <div class="unit-box">
+                <h3>4. Ünite: Optik</h3>
+                <ul>
+                    <li>Işık ve Aydınlanma</li>
+                    <li>Gölge Oluşumu</li>
+                    <li>Düzlem Aynalar</li>
+                    <li>Işığın Kırılması</li>
+                </ul>
+                <a href="#unit4">Üniteye Git →</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="navigation-buttons">
+        <button class="nav-button active" onclick="showUnit('unit1')">1. Ünite</button>
+        <button class="nav-button" onclick="showUnit('unit2')">2. Ünite</button>
+        <button class="nav-button" onclick="showUnit('unit3')">3. Ünite</button>
+        <button class="nav-button" onclick="showUnit('unit4')">4. Ünite</button>
+    </div>
+
+    <section id="units">
+        <div id="unit1" class="tab-content active">
+            <h2>1. Ünite: Elektrik ve Manyetizma</h2>
+            
+            <h3>1.1 Elektrik Akımı</h3>
+            <div class="definition">
+                <strong>Elektrik Akımı:</strong> Elektrik yüklerinin düzenli hareketine elektrik akımı denir. Akım, birim zamanda bir kesittan geçen yük miktarıdır.
+            </div>
+            
+            <p>Elektrik akımı, elektron akışının tersi yönünde tanımlanır. Konvansiyonel akım yönü, pozitif yüklerden negatif yüklere doğrudur. Akımın şiddeti amper (A) birimi ile ölçülür.</p>
+            
+            <div class="formula">
+                <p><strong>Akım Şiddeti Formülü:</strong></p>
+                <p>I = Q/t</p>
+                <p>I: Akım şiddeti (Amper)</p>
+                <p>Q: Yük miktarı (Coulomb)</p>
+                <p>t: Zaman (saniye)</p>
+            </div>
+            
+            <div class="example">
+                <h4>Örnek:</h4>
+                <p>5 saniyede 10 C yük geçen bir iletkenin akım şiddeti:</p>
+                <p>I = Q/t = 10 C / 5 s = 2 A</p>
+            </div>
+            
+            <h3>1.2 Potansiyel Farkı (Gerilim)</h3>
+            <div class="definition">
+                <strong>Potansiyel Farkı:</strong> İki nokta arasındaki elektriksel potansiyel farkına gerilim denir. Volt (V) birimi ile ölçülür.
+            </div>
+            
+            <p>Gerilim, elektrik yüklerini hareket ettiren elektrik alan kuvvetinin etkisidir. Pil, akü gibi gerilim kaynakları elektrik devresinde potansiyel farkı oluşturur.</p>
+            
+            <div class="formula">
+                <p><strong>Potansiyel Farkı Formülü:</strong></p>
+                <p>V = W/Q</p>
+                <p>V: Potansiyel farkı (Volt)</p>
+                <p>W: Yapılan iş (Joule)</p>
+                <p>Q: Yük miktarı (Coulomb)</p>
+            </div>
+            
+            <div class="important">
+                <p><strong>Önemli Not:</strong> Gerilim kaynağının kutupları arasındaki potansiyel farkı, kaynağın elektromotor kuvvetini (emk) verir.</p>
+            </div>
+            
+            <h3>1.3 Direnç ve Ohm Kanunu</h3>
+            <div class="definition">
+                <strong>Direnç:</strong> İletkenlerin elektrik akımına karşı gösterdiği zorluğa direnç denir. Ohm (Ω) birimi ile ölçülür.
+            </div>
+            
+            <p>Direnç, iletkenin cinsine, uzunluğuna, kesit alanına ve sıcaklığına bağlıdır. Ohm Kanunu, direnç, gerilim ve akım arasındaki ilişkiyi açıklar.</p>
+            
+            <div class="formula">
+                <p><strong>Ohm Kanunu:</strong></p>
+                <p>V = I × R</p>
+                <p>V: Gerilim (Volt)</p>
+                <p>I: Akım şiddeti (Amper)</p>
+                <p>R: Direnç (Ohm)</p>
+            </div>
+            
+            <div class="formula">
+                <p><strong>İletkenin Direnci:</strong></p>
+                <p>R = ρ × L/A</p>
+                <p>ρ: Özdirenç (Ω·m)</p>
+                <p>L: İletkenin uzunluğu (m)</p>
+                <p>A: Kesit alanı (m²)</p>
+            </div>
+            
+            <div class="example">
+                <h4>Örnek:</h4>
+                <p>12 V gerilim altında 3 A akım geçen bir direncin değeri:</p>
+                <p>R = V/I = 12 V / 3 A = 4 Ω</p>
+            </div>
+            
+            <h3>1.4 Elektrik Devreleri</h3>
+            <p>Elektrik devreleri, elektrik akımının kapalı yol izlediği sistemlerdir. Devrede gerilim kaynağı, iletkenler, dirençler ve anahtarlar bulunur.</p>
+            
+            <div class="important">
+                <p><strong>Seri Bağlama Özellikleri:</strong></p>
+                <p>• Akım her yerde aynıdır (I₁ = I₂ = I₃)</p>
+                <p>• Gerilimler toplanır (V = V₁ + V₂ + V₃)</p>
+                <p>• Dirençler toplanır (R = R₁ + R₂ + R₃)</p>
+            </div>
+            
+            <div class="important">
+                <p><strong>Paralel Bağlama Özellikleri:</strong></p>
+                <p>• Gerilim her kolda aynıdır (V₁ = V₂ = V₃)</p>
+                <p>• Akımlar toplanır (I = I₁ + I₂ + I₃)</p>
+                <p>• Direnç formülü: 1/R = 1/R₁ + 1/R₂ + 1/R₃</p>
+            </div>
+            
+            <div class="formula">
+                <p><strong>Elektriksel Güç:</strong></p>
+                <p>P = V × I = I²R = V²/R</p>
+                <p>P: Güç (Watt)</p>
+            </div>
+        </div>
+        
+        <div id="unit2" class="tab-content">
+            <h2>2. Ünite: Basınç ve Kaldırma Kuvveti</h2>
+            
+            <h3>2.1 Basınç Kavramı</h3>
+            <div class="definition">
+                <strong>Basınç:</strong> Birim yüzeye dik olarak uygulanan kuvvete basınç denir. Pascal (Pa) birimi ile ölçülür.
+            </div>
+            
+            <p>Basınç, katı, sıvı ve gaz halindeki maddelerde farklı özellikler gösterir. Basınç, yüzey alanı ile ters orantılıdır.</p>
+            
+            <div class="formula">
+                <p><strong>Basınç Formülü:</strong></p>
+                <p>P = F/A</p>
+                <p>P: Basınç (Pa)</p>
+                <p>F: Kuvvet (N)</p>
+                <p>A: Yüzey alanı (m²)</p>
+            </div>
+            
+            <div class="example">
+                <h4>Örnek:</h4>
+                <p>2 m² yüzeye 1000 N kuvvet uygulandığında basınç:</p>
+                <p>P = F/A = 1000 N / 2 m² = 500 Pa</p>
+            </div>
+            
+            <h3>2.2 Katı Basıncı</h3>
+            <p>Katı cisimlerin yüzeylere uyguladığı basınç, cismin ağırlığı ve temas alanına bağlıdır. Katı basıncı yalnızca temas yüzeyinde oluşur.</p>
+            
+            <div class="important">
+                <p><strong>Katı Basıncının Özellikleri:</strong></p>
+                <p>• Sadece temas yüzeyinde oluşur</p>
+                <p>• Yüzey alanı arttıkça azalır</p>
+                <p>• Cismin şekline bağlıdır</p>
+            </div>
+            
+            <h3>2.3 Sıvı Basıncı</h3>
+            <p>Sıvılar ağırlıkları nedeniyle içinde bulundukları kabın tabanına ve çeperlerine basınç uygularlar.</p>
+            
+            <div class="formula">
+                <p><strong>Sıvı Basıncı Formülü:</strong></p>
+                <p>P = ρ × g × h</p>
+                <p>ρ: Sıvının yoğunluğu (kg/m³)</p>
+                <p>g: Yerçekimi ivmesi (9.8 m/s²)</p>
+                <p>h: Sıvının yüksekliği (m)</p>
+            </div>
+            
+            <div class="important">
+                <p><strong>Sıvı Basıncının Özellikleri:</strong></p>
+                <p>• Derinlik arttıkça artar</p>
+                <p>• Her yöne eşit şiddette uygulanır</p>
+                <p>• Kabın şekline bağlı değildir</p>
+                <p>• Aynı seviyedeki basınçlar eşittir</p>
+            </div>
+            
+            <h3>2.4 Kaldırma Kuvveti ve Archimedes İlkesi</h3>
+            <div class="definition">
+                <strong>Kaldırma Kuvveti:</strong> Sıvıya daldırılan cisimlere sıvının uyguladığı yukarı yönlü kuvvete kaldırma kuvveti denir.
+            </div>
+            
+            <p>Archimedes İlkesi'ne göre, sıvıya daldırılan bir cisme etki eden kaldırma kuvveti, cismin yer değiştirdiği sıvının ağırlığına eşittir.</p>
+            
+            <div class="formula">
+                <p><strong>Kaldırma Kuvveti Formülü:</strong></p>
+                <p>F<sub>k</sub> = ρ<sub>sıvı</sub> × g × V<sub>daldırılan</sub></p>
+                <p>F<sub>k</sub>: Kaldırma kuvveti (N)</p>
+                <p>ρ<sub>sıvı</sub>: Sıvının yoğunluğu (kg/m³)</p>
+                <p>V<sub>daldırılan</sub>: Daldırılan hacim (m³)</p>
+            </div>
+            
+            <div class="important">
+                <p><strong>Cismin Durumu:</strong></p>
+                <p>• Ağırlık > Kaldırma kuvveti → Batar</p>
+                <p>• Ağırlık = Kaldırma kuvveti → Askıda kalır</p>
+                <p>• Ağırlık < Kaldırma kuvveti → Yüzer</p>
+            </div>
+            
+            <div class="example">
+                <h4>Örnek:</h4>
+                <p>Suya daldırılan 0.001 m³ hacmindeki cisme etki eden kaldırma kuvveti:</p>
+                <p>F<sub>k</sub> = 1000 kg/m³ × 9.8 m/s² × 0.001 m³ = 9.8 N</p>
+            </div>
+        </div>
+        
+        <div id="unit3" class="tab-content">
+            <h2>3. Ünite: Dalgalar</h2>
+            
+            <h3>3.1 Dalga Kavramı ve Özellikleri</h3>
+            <div class="definition">
+                <strong>Dalga:</strong> Enerjinin madde aktarımı olmaksızın bir ortamdan diğerine geçmesine dalga denir.
+            </div>
+            
+            <p>Dalgalar, titreşim yapan kaynaktan çevreye yayılan enerji aktarım şeklidir. Dalgalar madde taşımaz, sadece enerji taşır.</p>
+            
+            <div class="formula">
+                <p><strong>Dalga Hızı Formülü:</strong></p>
+                <p>v = λ × f</p>
+                <p>v: Dalga hızı (m/s)</p>
+                <p>λ: Dalga boyu (m)</p>
+                <p>f: Frekans (Hz)</p>
+            </div>
+            
+            <div class="important">
+                <p><strong>Dalga Özellikleri:</strong></p>
+                <p>• Genlik (A): Denge konumundan maksimum sapma</p>
+                <p>• Periyot (T): Bir tam titreşimin süresi</p>
+                <p>• Frekans (f): Birim zamandaki titreşim sayısı (f = 1/T)</p>
+                <p>• Dalga boyu (λ): Ardışık iki tepe arası mesafe</p>
+            </div>
+            
+            <h3>3.2 Yay Dalgası</h3>
+            <p>Yay dalgası, enine dalga türüdür. Dalga hareket yönüne dik doğrultuda salınım gösterir. Yayın bir ucunda oluşturulan titreşim diğer uca kadar yayılır.</p>
+            
+            <div class="example">
+                <h4>Yay Dalgası Özellikleri:</h4>
+                <p>• Enine dalga türüdür</p>
+                <p>• Yansıma gösterir</p>
+                <p>• Sabit uctan yansımada faz değişir</p>
+                <p>• Serbest uctan yansımada faz değişmez</p>
+            </div>
+            
+            <h3>3.3 Su Dalgası</h3>
+            <p>Su dalgası da enine dalga türündedir. Su yüzeyinde oluşan dalgalar, dairesel olarak yayılır ve enerji taşır.</p>
+            
+            <div class="important">
+                <p><strong>Su Dalgası Özellikleri:</strong></p>
+                <p>• Kaynaktan dairesel olarak yayılır</p>
+                <p>• Derinlik azaldıkça hız azalır</p>
+                <p>• Engellerin arkasına geçebilir (kırınım)</p>
+                <p>• Yansıma ve kırılma gösterir</p>
+            </div>
+            
+            <h3>3.4 Ses Dalgası</h3>
+            <div class="definition">
+                <strong>Ses Dalgası:</strong> Boyuna dalga türünde olan ses dalgaları, maddesel ortamda yayılır ve işitme duyumuza neden olur.
+            </div>
+            
+            <p>Ses dalgaları, hava moleküllerinin sıkışma ve genleşmesi ile oluşur. Boşlukta ses yayılamaz.</p>
+            
+            <div class="formula">
+                <p><strong>Havataki Ses Hızı:</strong></p>
+                <p>v = 331 + 0.6 × T</p>
+                <p>v: Ses hızı (m/s)</p>
+                <p>T: Sıcaklık (°C)</p>
+            </div>
+            
+            <div class="important">
+                <p><strong>Ses Dalgasının Özellikleri:</strong></p>
+                <p>• Boyuna dalgadır</p>
+                <p>• Maddesel ortamda yayılır</p>
+                <p>• Sıcaklık arttıkça hızı artar</p>
+                <p>• Yoğun ortamda daha hızlı yayılır</p>
+                <p>• İnsan kulağı 20 Hz - 20000 Hz arası duyar</p>
+            </div>
+            
+            <div class="example">
+                <h4>Örnek:</h4>
+                <p>25°C sıcaklıktaki havada ses hızı:</p>
+                <p>v = 331 + 0.6 × 25 = 331 + 15 = 346 m/s</p>
+            </div>
+            
+            <div class="formula">
+                <p><strong>Yankı Formülü:</strong></p>
+                <p>d = (v × t) / 2</p>
+                <p>d: Engele uzaklık (m)</p>
+                <p>v: Ses hızı (m/s)</p>
+                <p>t: Yankı duyulma süresi (s)</p>
+            </div>
+        </div>
+        
+        <div id="unit4" class="tab-content">
+            <h2>4. Ünite: Optik</h2>
+            
+            <h3>4.1 Işık ve Aydınlanma</h3>
+            <div class="definition">
+                <strong>Işık:</strong> Göz tarafından algılanabilen elektromanyetik dalgalara ışık denir.
+            </div>
+            
+            <p>Işık, enerji taşıyan elektromanyetik dalga türüdür. Boşlukta yayılabilir ve en büyük hızı boşlukta sahiptir (c = 3×10⁸ m/s).</p>
+            
+            <div class="important">
+                <p><strong>Işığın Özellikleri:</strong></p>
+                <p>• Doğrusal yayılır</p>
+                <p>• Boşlukta yayılabilir</p>
+                <p>• Yansıma, kırılma, girişim gösterir</p>
+                <p>• Dalga ve tanecik özelliği vardır</p>
+            </div>
+            
+            <div class="formula">
+                <p><strong>Aydınlanma Şiddeti:</strong></p>
+                <p>E = I / r²</p>
+                <p>E: Aydınlanma şiddeti (lux)</p>
+                <p>I: Işık akısı (lumen)</p>
+                <p>r: Uzaklık (m)</p>   
+            </div>
+
+            <div class="example">
+                <h4>Örnek:</h4>
+                <p>1 lumen ışık akısına sahip bir kaynak 2 m uzakta:</p>
+                <p>E = 1 / (2²) = 1 / 4 = 0.25 lux</p>
+            </div>
+            <h3>4.2 Gölge Oluşumu</h3>      
+
+            <p>Işık kaynaklarının önünde opak cisimler varsa gölge oluşur. Gölge, ışığın cisim tarafından engellenmesiyle meydana gelir.</p>        
+
+
+            <div class="important">
+                <p><strong>Gölge Özellikleri:</strong></p>
+                <p>• Gölge, ışık kaynağı, cisim ve ekran arasında oluşur</p>
+                <p>• Gölgenin boyu cisme ve ışık kaynağına bağlıdır</p>
+                <p>• Gölge kenarları bulanıktır (difüzyon)</p>
+                <p>• Gölge, ışık kaynağına olan uzaklığa bağlı olarak değişir</p>
+            </div>                                      
+            <h3>4.3 Düzlem Aynalar</h3>     
+            <p>Düzlem aynalar, ışığı yansıtarak görüntü oluşturur. Yansıyan ışık, aynadan gelen ışıkla aynı açıda yansır.</p>
+            <div class="definition">
+                <strong>Düzlem Ayna:</strong> Yüzeyi düz olan ve ışığı yansıtan aynadır.
+            </div>  
+            <div class="important">
+                <p><strong>Düzlem Ayna Özellikleri:</strong></p>
+                <p>• Görüntü sanal ve düz</p>
+                <p>• Görüntü boyu cisim boyuna eşittir</p>
+                <p>• Görüntü, cisimle aynı uzaklıktadır</p>
+                <p>• Görüntü soldan sağa ters</p>
+            </div>
+            <div class="formula">
+                <p><strong>Düzlem Ayna Yansıma Yasası:</strong></p>
+                <p>θ<sub>g</sub> = θ<sub>i</sub></p>
+                <p>θ<sub>g</sub>: Görüntü açısı</p>
+                <p>θ<sub>i</sub>: Işık ışınının geliş açısı</p>
+            </div>
+            <div class="example">
+                <h4>Örnek:</h4>
+                <p>Bir düzlem aynada 30° açıyla gelen ışık ışını, 30° açıyla yansır.</p>
+            </div>
+            <h3>4.4 Işığın Kırılması</h3>
+            <p>Işık, farklı ortamlardan geçerken hız değiştirir ve yön değiştirir. Bu olaya ışığın kırılması denir.</p>
+            <div class="definition">
+                <strong>Işığın Kırılması:</strong> Işık ışınının bir ortamdan diğerine geçerken hız ve yön değiştirmesidir.
+            </div>
+            <div class="important">
+                <p><strong>Kırılma Özellikleri:</strong></p>
+                <p>• Işık, yoğun ortamdan seyrek ortama geçerken hızlanır</p>
+                <p>• Seyrek ortamdan yoğun ortama geçerken yavaşlar</p>
+                <p>• Kırılma açısı, gelen ışın açısına bağlıdır</p>
+                <p>• Kırılma indisi (n) ile ifade edilir: n = c/v</p>
+            </div>
+            <div class="formula">
+                <p><strong>Kırılma Yasası (Snell Yasası):</strong></p>
+                <p>n<sub>1</sub> × sin(θ<sub>1</sub>) = n<sub>2</sub> × sin(θ<sub>2</sub>)</p>
+                <p>n<sub>1</sub>: İlk ortamın kırılma indisi</p>
+                <p>n<sub>2</sub>: İkinci ortamın kırılma indisi</p>
+                <p>θ<sub>1</sub>: İlk ortamda gelen ışın açısı</p>
+                <p>θ<sub>2</sub>: İkinci ortamda kırılan ışın açısı</p>
+            </div>  
+            <div class="example">
+                <h4>Örnek:</h4>
+                <p>Hava (n<sub>1</sub> = 1) ve su (n<sub>2</sub> = 1.33) arasındaki kırılma:</p>
+                <p>n<sub>1</sub> × sin(θ<sub>1</sub>) = n<sub>2</sub> × sin(θ<sub>2</sub>)</p>
+                <p>1 × sin(30°) = 1.33 × sin(θ<sub>2</sub>)</p>
+                <p>sin(θ<sub>2</sub>) = 0.5 / 1.33 ≈ 0.375, θ<sub>2</sub> ≈ 22°</p>
+            </div>
+        </div>
+    </section>  
+    <script>
+        function showUnit(unitId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.nav-button');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(unitId).classList.add('active');
+            document.querySelector(`.nav-button[onclick="showUnit('${unitId}')"]`).classList.add('active');
+        }
+        // Set the first unit as active by default
+        document.addEventListener('DOMContentLoaded', () => {
+            showUnit('unit1');
+        });
+        document.querySelectorAll('a[href^="#unit"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const unitId = this.getAttribute('href').substring(1);
+        showUnit(unitId);
+        e.preventDefault();
+        // İsteğe bağlı: sayfayı sekmelerin üstüne kaydırmak için aşağıdaki satırı ekleyebilirsiniz
+        document.querySelector('.navigation-buttons').scrollIntoView({behavior: "smooth"});
+    });
+});
+    </script>
+</body>
+</html>
